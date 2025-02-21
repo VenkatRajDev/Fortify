@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/Fonts/FiraSans-Bold.ttf",
+      "sha1": "bdb04cd9e835a3cf7ba22df0354f1472812df225"
+    },
+    {
+      "path": "assets/Fonts/FiraSans-Light.ttf",
+      "sha1": "d795fdfc99d1bad2c0e42eea5a9f06e49dd67b1b"
+    },
+    {
+      "path": "assets/Fonts/FiraSans-Medium.ttf",
+      "sha1": "9181432d76711ae510c9f20713465810cf09e63b"
+    },
+    {
+      "path": "assets/Fonts/FiraSans-Regular.ttf",
+      "sha1": "9647e8c14e6618517f6942fbada0a01e2c18973d"
+    }
+  ]
+}
