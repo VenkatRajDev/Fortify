@@ -1,4 +1,4 @@
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, StatusBar} from 'react-native';
 import React, {} from 'react';
 import {FontFamily, FontSize} from '../../Theme/Fonts';
 import {Light} from '../../Theme/Appearance';
@@ -25,6 +25,7 @@ const LOGIN = ({navigation}) => {
       </View>
       {/* contain all textinput */}
       <Forms navigation={navigation}/>
+      <StatusBar barStyle='dark-content' backgroundColor={Light.BGCOLOR}/>
     </SafeAreaView>
   );
 };

@@ -12,36 +12,44 @@ import {Light} from '../../Theme/Appearance';
 import {FontFamily, FontSize} from '../../Theme/Fonts';
 import Animated, {FadeInLeft, FadeInRight} from 'react-native-reanimated';
 import {MMKV} from 'react-native-mmkv';
+import RNrestart from 'react-native-restart';
 
 const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
 
 const storage = new MMKV();
 
-const Forms = ({navigation}) => {
-  const [UserName, setUserName] = useState('');
-  const [Password, setPassword] = useState('');
-  const [ConformPassword, setConformPassword] = useState('');
-  const [Hint, setHint] = useState('');
-
-  useEffect(() => {
-    storage.set('UserName', UserName === '' ? `Guest` : UserName);
-    storage.set('Password', Password);
-    storage.set('Hint', Hint === '' ? `No Hint` : Hint);
-  }, [UserName, Password, Hint]);
+const Forms = () => {
+  const [UserName, setUserName] = useState(null);
+  const [Password, setPassword] = useState(null);
+  const [ConformPassword, setConformPassword] = useState(null);
+  const [Hint, setHint] = useState(null);
 
   const HandleTextInput = useCallback(() => {
-    if (Password === ``) {
+    if (Password === null || Password === '') {
       console.log(`Enter the storng password`);
-    } else if (Password.length < 8) {
+      return
+    } else if (Password.length < 4) {
       console.log('the password altest contain 8 character');
+      return;
     } else if (Password !== ConformPassword) {
       console.log(`the password is not match`);
+      return;
     } else {
+      storage.set(
+        'UserName',
+        UserName === '' || UserName === null
+          ? `Guest`
+          : JSON.stringify(UserName),
+      );
+      storage.set('Password', JSON.stringify(Password));
+      storage.set(
+        'Hint',
+        Hint === '' || Hint === null ? `No Hint` : JSON.stringify(Hint),
+      );
       storage.set('IsLogedIn', true);
-      DevSettings.reload()
-      //navigation.replace('home', {message: 'Hello mf'});
+      RNrestart.Restart();
     }
-  }, [Password, ConformPassword]);
+  }, [Password, ConformPassword, UserName, Hint]);
 
   return (
     <>
@@ -61,6 +69,7 @@ const Forms = ({navigation}) => {
           placeholderTextColor="#676262"
           placeholder="Password"
           secureTextEntry={true}
+          keyboardType="number-pad"
           style={[styles.AnimatedTextInput]}
         />
         <AnimatedTextInput
@@ -70,6 +79,7 @@ const Forms = ({navigation}) => {
           placeholderTextColor="#676262"
           placeholder="Conform Password"
           secureTextEntry={true}
+          keyboardType="number-pad"
           style={[styles.AnimatedTextInput]}
         />
         <AnimatedTextInput

@@ -1,16 +1,20 @@
 
 export const Dark = {
-    BGCOLOR: '#0D0907',       // Background color (Dark)
-    TEXT: '#FFFFFF',         // Text color (White)
-    BGBUTTON: '#1E3A5F',     // Button background (Dark Blue)
-    BUTTONTEXT: '#E0E6ED',   // Button text (Light Grayish Blue)
-    SECOUNDARY: '#14213D'    // Secondary color (Deep Blue)
+    BGCOLOR: '#1E1E2E', 
+    TEXT: '#E5E5E5',  
+    BGBUTTON: '#BF3D56', 
+    BUTTONTEXT: '#FFC0CB',
+    SECOUNDARY: '#556B87',
+    SECOUNDARY2:'#4682B4',
+    TABBAR:'#2A2A3A'
 };
 
 export const Light = {
-    BGCOLOR: '#F8F8FF', // white
-    TEXT: '#461312', // brown
-    BGBUTTON: '#ED809D', // pink
-    BUTTONTEXT: '#461312', // brown
-    SECOUNDARY:'#B0C4DE'
+    BGCOLOR: '#F8F8FF',
+    TEXT: '#0D0907',
+    BGBUTTON: '#ED809D',
+    BUTTONTEXT: '#461312',
+    SECOUNDARY:'#B0C4DE',
+    SECOUNDARY2:'#87CEFA',
+    TABBAR:'#E6E6FA',
 }

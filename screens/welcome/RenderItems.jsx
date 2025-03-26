@@ -82,13 +82,13 @@ const RenderItems = ({item, index, horize,flatlistIndex,flastListref, data}) => 
       </Animated.Text>
 
       {/* image Container */}
-      <View style={styles.imageView}>
+      <Animated.View style={styles.imageView}>
         <Animated.Image
           source={item.image}
           style={[AnimatedStyle, {width: '100%', height: '100%',}]}
           entering={FadeInUp.springify().damping(80).stiffness(200)}
         />
-      </View>
+      </Animated.View>
     </View>
   );
 };

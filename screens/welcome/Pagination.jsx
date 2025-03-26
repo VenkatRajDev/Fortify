@@ -34,11 +34,11 @@ const Dot = ({index, horize}) => {
 
 const Pagination = ({data, horize}) => {
   return (
-    <View style={[styles.container]}>
+    <Animated.View style={[styles.container]}>
       {[...Array(data.length).keys()].map((ele, index) => {
         return <Dot key={`dot ${ele}`} index={index} horize={horize} />;
       })}
-    </View>
+    </Animated.View>
   );
 };
 

@@ -127,7 +127,7 @@ const WELCOME = ({navigation}) => {
               {backgroundColor: Light.BGBUTTON}
             ]}
             onPress={BackButton}>
-            <Text
+            <Animated.Text
               style={[
                 styles.buttonText,
                 {
@@ -137,7 +137,7 @@ const WELCOME = ({navigation}) => {
                 },
               ]}>
               Back
-            </Text>
+            </Animated.Text>
           </Button>
 
           {/* Next Button */}
@@ -177,7 +177,7 @@ const WELCOME = ({navigation}) => {
           </Button>
         </View>
       </Animated.View>
-      {/* <StatusBar barStyle="Light-content" /> */}
+      <StatusBar barStyle="dark-content" backgroundColor={Light.BGCOLOR}/>
     </SafeAreaView>
   );
 };
