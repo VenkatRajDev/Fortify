@@ -1,97 +1,41 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Fortify - Password Manager (Offline)
 
-# Getting Started
+## Overview
+Fortify is a simple and secure offline password manager that allows users to store, manage, and access their passwords conveniently. It functions like a notes app specifically for passwords, requiring a master password for access while keeping data stored locally on the user's device.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
-## Step 1: Start Metro
+### Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- **Master Password Protection**: Users must enter a master password every time they open the app to ensure security.
+- **Offline Storage**: All passwords are stored locally on the device, making it a fully offline solution.
+- **Password Management**:
+    - Add new passwords.
+    - Update existing passwords.
+    - Delete passwords when no longer needed.
+- **Smooth UI & Animations**: The app provides a modern and visually appealing user experience with fluid animations.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### Usage
 
-```sh
-# Using npm
-npm start
+1. **Launch the App**
+   - Upon opening, the app prompts the user to enter the master password.
+2. **Managing Passwords**
+   - Add a new password entry by tapping the Add New button.
+   - Edit an existing password by selecting it and making changes.
+   - Remove a password when no longer needed.
+3. **Security Considerations**
+   - Since the app does not use encryption yet, users should ensure their device is secure.
+   - The master password is required every time the app is accessed to prevent unauthorized usage.
 
-# OR using Yarn
-yarn start
-```
 
-## Step 2: Build and run your app
+## Limitations & Future Improvements
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- **No Encryption**: Currently, stored passwords are not encrypted.
+- **No Auto-Suggestions**: The app does not autofill passwords during login on other apps or websites.
+- **Potential Enhancements**:
+   - Implementing encryption for secure data storage.
+   - Adding biometric authentication (fingerprint/face unlock).
+   - Cloud backup & sync options for multi-device access.
 
-### Android
+## Conclusion
 
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Fortify is a lightweight, user-friendly password manager that provides a straightforward way to store and manage passwords offline. Future updates may enhance security and usability with encryption and additional features.
