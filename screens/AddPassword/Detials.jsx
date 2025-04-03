@@ -34,6 +34,7 @@ const Detials = ({website,notes,setNewPassword}) => {
           onChangeText={text => setNewPassword((pass) => {
             return {...pass,notes:text}
           })}
+          multiline={true}
         />
       </View>
     </Animated.View>
