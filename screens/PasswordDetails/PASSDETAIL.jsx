@@ -188,7 +188,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: SCREEN_WIDTH * 0.05,
-    backgroundColor: 'red',
   },
   eachItemText: {
     fontSize: FontSize.SUB - 5,
